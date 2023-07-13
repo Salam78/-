@@ -1,0 +1,22 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите значение N:");
+        int N = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Натуральные числа от N до 1:");
+        PrintNumbers(N);
+    }
+
+    static void PrintNumbers(int N)
+    {
+        if (N >= 1)
+        {
+            Console.Write(N + " ");
+            PrintNumbers(N - 1);
+        }
+    }
+}
