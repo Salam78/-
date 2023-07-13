@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numbers = new int[8];
+
+        // Заполнение массива числами от 1 до 8
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = i + 1;
+        }
+
+        // Вывод элементов массива на экран
+        Console.WriteLine("Элементы массива:");
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.WriteLine(numbers[i]);
+        }
+    }
+}
