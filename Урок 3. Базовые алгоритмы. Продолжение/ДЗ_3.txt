@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Введите число N:");
+        int N = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Таблица кубов чисел от 1 до " + N + ":");
+        Console.WriteLine("Число\tКуб");
+
+        for (int i = 1; i <= N; i++)
+        {
+            int cube = i * i * i;
+            Console.WriteLine(i + "\t" + cube);
+        }
+
+        Console.ReadLine();
+    }
+}

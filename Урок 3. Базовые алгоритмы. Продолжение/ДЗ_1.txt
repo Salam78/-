@@ -1,0 +1,41 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Введите пятизначное число:");
+        int number = int.Parse(Console.ReadLine());
+
+        if (IsPalindrome(number))
+        {
+            Console.WriteLine("Число является палиндромом.");
+        }
+        else
+        {
+            Console.WriteLine("Число не является палиндромом.");
+        }
+    }
+
+    static bool IsPalindrome(int number)
+    {
+        string numberString = number.ToString();
+
+        int left = 0;
+        int right = numberString.Length - 1;
+
+        while (left < right)
+        {
+            if (numberString[left] != numberString[right])
+            {
+                return false;
+            }
+
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+}
+
