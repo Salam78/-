@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numbers = new int[10]; // Создание массива из 10 элементов
+
+        // Заполнение массива случайными положительными трёхзначными числами
+        Random random = new Random();
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = random.Next(100, 1000);
+        }
+
+        // Подсчет количества четных чисел в массиве
+        int evenCount = 0;
+
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] % 2 == 0)
+            {
+                evenCount++;
+            }
+        }
+
+        Console.WriteLine("Количество четных чисел в массиве: " + evenCount);
+    }
+}
