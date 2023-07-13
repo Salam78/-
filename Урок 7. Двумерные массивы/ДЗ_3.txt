@@ -1,0 +1,47 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+       
+        int[,] array = {
+            { 1, 4, 7, 2},
+            { 5, 9, 2, 3 },
+            { 8, 4, 2, 4 }
+        };
+
+        
+        int rows = array.GetLength(0);
+        int cols = array.GetLength(1);
+
+        
+        int[] columnSums = new int[cols];
+
+        
+        for (int col = 0; col < cols; col++)
+        {
+            for (int row = 0; row < rows; row++)
+            {
+                columnSums[col] += array[row, col];
+            }
+        }
+
+     
+        double[] columnAverages = new double[cols];
+
+        
+        for (int col = 0; col < cols; col++)
+        {
+            columnAverages[col] = (double)columnSums[col] / rows;
+        }
+
+       
+        for (int col = 0; col < cols; col++)
+        {
+            Console.WriteLine("Среднее арифметическое столбца " + col + ": " + columnAverages[col]);
+        }
+
+        Console.ReadLine();
+    }
+}

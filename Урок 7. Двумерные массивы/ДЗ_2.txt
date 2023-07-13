@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+       
+        int[,] array = {
+            { 1, 4, 7, 2},
+            { 5, 9, 2, 3 },
+            { 8, 4, 2, 4 }
+        };
+
+        
+        Console.Write("Введите строку элемента: ");
+        int row = int.Parse(Console.ReadLine());
+        Console.Write("Введите столбец элемента: ");
+        int column = int.Parse(Console.ReadLine());
+
+        
+        int rowCount = array.GetLength(0);
+        int columnCount = array.GetLength(1);
+
+        if (row >= 0 && row < rowCount && column >= 0 && column < columnCount)
+        {
+          
+            int element = array[row, column];
+            Console.WriteLine("Значение элемента: " + element);
+        }
+        else
+        {
+            Console.WriteLine("Такого элемента не существует.");
+        }
+    }
+}
+
