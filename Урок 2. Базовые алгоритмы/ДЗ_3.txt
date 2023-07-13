@@ -1,0 +1,36 @@
+using System;
+
+class Program
+{
+    static bool IsWeekend(int dayNumber)
+    {
+        // Проверяем, является ли день выходным
+        if (dayNumber == 6 || dayNumber == 7)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    static void Main(string[] args)
+    {
+        // Получаем входные данные от пользователя
+        Console.Write("Введите номер дня недели (1-7): ");
+        int day = int.Parse(Console.ReadLine());
+
+        // Вызываем функцию проверки и выводим результат
+        bool isWeekend = IsWeekend(day);
+        if (isWeekend)
+        {
+            Console.WriteLine("Этот день является выходным.");
+        }
+        else
+        {
+            Console.WriteLine("Этот день не является выходным.");
+        }
+    }
+}
+
